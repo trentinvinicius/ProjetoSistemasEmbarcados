@@ -23,9 +23,9 @@ void configure_tcc(void)
 	//! [setup_config_defaults]
 
 	//! [setup_change_config]	
-	config_tcc_pwm.counter.clock_source = GCLK_GENERATOR_1;
-	config_tcc_pwm.counter.clock_prescaler = TCC_CLOCK_PRESCALER_DIV64;
-	config_tcc_pwm.counter.period =   2000;
+	config_tcc_pwm.counter.clock_source = GCLK_GENERATOR_1; //clock = 8000000  system_gclk_chan_get_hz(GCLK_GENERATOR_1)
+	config_tcc_pwm.counter.clock_prescaler = TCC_CLOCK_PRESCALER_DIV64; // divide o clock por 64
+	config_tcc_pwm.counter.period =   1250000; //125000 equivale a 1 s
 	//! [setup_change_config]
 
 	//! [setup_set_config]

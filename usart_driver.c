@@ -45,8 +45,8 @@ int usartConfig(){
 void configure_usart_callbacks(void)
 {
 	//! [setup_register_callbacks]
-	usart_register_callback(&usart_instance,
-	usart_write_callback, USART_CALLBACK_BUFFER_TRANSMITTED);
+	//usart_register_callback(&usart_instance,
+	//usart_write_callback, USART_CALLBACK_BUFFER_TRANSMITTED);
 	usart_register_callback(&usart_instance,
 	usart_read_callback, USART_CALLBACK_BUFFER_RECEIVED);
 	//! [setup_register_callbacks]
@@ -56,8 +56,8 @@ void configure_usart_callbacks(void)
 	usart_enable_callback(&usart_instance, USART_CALLBACK_BUFFER_RECEIVED);
 	//! [setup_enable_callbacks]
 	
-	uint8_t string[] = "Hello World!\r\n";
-	usart_write_buffer_wait(&usart_instance, string, sizeof(string));
+	//uint8_t string[] = "Hello World!\r\n";
+	//usart_write_buffer_wait(&usart_instance, string, sizeof(string));
 }
 
 #if 0
